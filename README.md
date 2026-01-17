@@ -18,17 +18,15 @@ AWS（EC2/RDS）上で動作する、シンプルなPHP/HTML製タスク管理�
 ## 機能
 
 - タスクの追加（INSERT）
-
+- タスクの削除（DELETE）
 - タスクの一覧表示（SELECT）
 
-- タスクの削除（DELETE）
 
-
-## こだわったポイント
-
-- **DB設計**: データの整合性を保つため、各タスクに一意のID（主キー）を割り振り、正確な削除操作を実現しました。
-
-- **セキュリティ**: PHPの `htmlspecialchars` を用いて、クロスサイトスクリプティング（XSS）対策を行っています。
+## 工夫・学習したポイント
+- **セキュリティの基礎知識**: GitHub公開にあたり、接続情報（エンドポイントやパスワード）を環境変数や伏せ字に置き換える「機密情報の管理」を意識しました。
+- **効率的な開発プロセス**: AI（Gemini）を技術パートナーとして活用し、プロンプトを通じてエラー解決やコードのリファクタリングを効率的に進める手法を実践しました。
+- **インフラの可視化**: 単に動かすだけでなく、`php -v` や `httpd -v` を用いて、使用しているミドルウェアの正確なバージョン（PHP 8.4.13 / Apache 2.4.65）を把握し、ドキュメント化しました。
+- **セキュリティ対策**: PHPファイルで `htmlspecialchars` を使用し、WXSS（クロスサイトスクリプティング）対策を実装しています。
 
 
 ## ネットワーク構成図
@@ -44,8 +42,6 @@ CREATE TABLE tasks (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
 
-    task_name VARCHAR(255) NOT NULL,
-
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    task_name VARCHAR(255) NOT NULL
 
 );
