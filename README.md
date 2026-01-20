@@ -31,7 +31,8 @@ AWS（EC2/RDS）上で動作する、シンプルなPHP/HTML製タスク管理�
 
 ## ネットワーク構成図
 
-（ここにAWSの構成図の画像を貼ると最高です！）
+<img width="591" height="311" alt="簡易タスクアプリ構成図" src="https://github.com/user-attachments/assets/634c015e-6416-44dc-b62a-21cfa81e07b3" />
+
 
 
 ## DB設計 (MySQL)
