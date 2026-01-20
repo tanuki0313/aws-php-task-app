@@ -46,3 +46,10 @@ CREATE TABLE tasks (
     task_name VARCHAR(255) NOT NULL
 
 );
+
+## 動作デモ
+
+<img width="377" height="347" alt="image" src="https://github.com/user-attachments/assets/9f014563-2bbb-41a6-ada4-048e58d31f02" />
+
+- タスクの追加・一覧表示・削除の基本機能を実装しています。
+- ユーザー入力値は `htmlspecialchars` でエスケープ処理を行い、安全に表示しています。
